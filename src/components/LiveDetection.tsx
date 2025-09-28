@@ -6,6 +6,7 @@ import {
   ObjectDetection,
 } from "@tensorflow-models/coco-ssd";
 import { load as loadMobilenet, MobileNet } from "@tensorflow-models/mobilenet";
+import "@tensorflow/tfjs-backend-webgl";
 import "@tensorflow/tfjs-backend-cpu";
 import Webcam from "react-webcam";
 import { renderPredictions } from "@/utils/render-predictions";
