@@ -1,0 +1,44 @@
+{
+  "name": "nexts-template",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.10.0",
+    "@next-auth/prisma-adapter": "^1.0.7",
+    "@prisma/client": "^6.13.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.15",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tailwindcss/postcss": "^4.1.11",
+    "bcrypt": "^6.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.539.0",
+    "next": "15.4.6",
+    "next-auth": "^4.24.7",
+    "next-themes": "^0.4.6",
+    "react": "^19",
+    "react-dom": "^19",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "postcss": "^8",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "prisma": "^6.13.0",
+    "tailwindcss": "^4.1.11",
+    "tw-animate-css": "^1.3.6",
+    "typescript": "^5"
+  }
+}
