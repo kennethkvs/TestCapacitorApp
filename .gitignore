@@ -26,12 +26,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-# .env              UNCOMMENT THIS
-# .env.local        UNCOMMENT THIS
+.env
+.env.local
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-#next-env.d.ts      UNCOMMENT THIS
+next-env.d.ts
