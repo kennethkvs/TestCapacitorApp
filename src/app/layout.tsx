@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
+  title: "Test Capacitor App",
   description: "",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
         >
           <AuthProvider>
             <Navbar />
-            <main className="flex min-h-screen flex-col items-center justify-center">
+            <main className="flex min-h-screen flex-col items-center">
               {children}
             </main>{" "}
           </AuthProvider>
