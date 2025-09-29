@@ -1,0 +1,28 @@
+PODS:
+  - Capacitor (7.4.3):
+    - CapacitorCordova
+  - CapacitorCommunityCameraPreview (7.0.2):
+    - Capacitor
+  - CapacitorCordova (7.4.3)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorCommunityCameraPreview (from `../../node_modules/@capacitor-community/camera-preview`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCommunityCameraPreview:
+    :path: "../../node_modules/@capacitor-community/camera-preview"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+
+SPEC CHECKSUMS:
+  Capacitor: 28d6c01026a9a3f7156529498ec1f389a2a28dbc
+  CapacitorCommunityCameraPreview: a45e3974b2f96fbc118d9cde1c8e5990fadf364f
+  CapacitorCordova: 435121e81a2df4d0034f0fb11fcefab5104cfdb5
+
+PODFILE CHECKSUM: efd6b171d7a6fcddca3513cb74cdfdd05ad4e098
+
+COCOAPODS: 1.16.2

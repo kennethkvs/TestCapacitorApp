@@ -9,6 +9,8 @@ import { load as loadMobilenet, MobileNet } from "@tensorflow-models/mobilenet";
 import "@tensorflow/tfjs-backend-webgl";
 import "@tensorflow/tfjs-backend-cpu";
 import Webcam from "react-webcam";
+import { Capacitor } from "@capacitor/core";
+import { CameraPreview } from "@capacitor-community/camera-preview";
 import { renderPredictions } from "@/utils/render-predictions";
 
 let interval: NodeJS.Timeout;
@@ -52,7 +54,7 @@ const LiveDetection = () => {
       const detectObjects = await model.detect(
         webcamRef.current.video,
         10,
-        0.8,
+        0.6,
       );
 
       const classifyObjects = await mobilenet.classify(
@@ -80,6 +82,7 @@ const LiveDetection = () => {
   useEffect(() => {
     showVideo();
     setupModel();
+    // CameraPreview.start({ parent: "cameraPreview", disableAudio: true });
 
     return () => {
       clearInterval(interval);
@@ -90,11 +93,15 @@ const LiveDetection = () => {
     <div>Loading...</div>
   ) : (
     <div className="relative flex w-3/4 flex-col items-center">
-      <Webcam
-        ref={webcamRef}
-        className="h-[720px] w-full rounded-lg border-2 border-gray-300"
-        muted
-      />
+      {Capacitor.isNativePlatform() ? (
+        <div id="cameraPreview">Test stuff</div>
+      ) : (
+        <Webcam
+          ref={webcamRef}
+          className="h-[720px] w-full rounded-lg border-2 border-gray-300"
+          muted
+        />
+      )}
       <canvas
         ref={canvasRef}
         className="absolute top-0 left-0 z-99999 h-[720px] w-full"
