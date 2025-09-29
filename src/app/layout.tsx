@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import AuthProvider from "./context/AuthProvider";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -24,12 +23,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AuthProvider>
-            <Navbar />
-            <main className="flex min-h-screen flex-col items-center">
-              {children}
-            </main>{" "}
-          </AuthProvider>
+          <Navbar />
+          <main className="flex min-h-screen flex-col items-center">
+            {children}
+          </main>{" "}
         </ThemeProvider>
       </body>
     </html>
